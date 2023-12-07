@@ -13,20 +13,32 @@ def easy(num):
     The guessed number, num, is turned into a float.
     Then, the number is checked if it is not equal to the random number.
     If it isn't equal, it checks if it is greater or less than.
-    If the guessed number is lower than the random number, it returns higher.
-    If the guessed number is higher than the random number, it returns lower.
+        If higher than guessed number, it returns higher.
+        If lower than guessed number, it returns lower.
+    If it's a negative number, it raises a value error.
+    If it's not a string, it raises a type error.
     Otherwise, it returns true which means you win.
-    :param num:
+    :param num: the guessed number
     :return:
     """
     float_num = float(num)
-    if float_num != random_easy:
-        if float_num < random_easy:
-            return f'higher'
-        elif float_num > random_easy:
-            return f'lower'
-    else:
-        return True
+    try:
+        if float_num != random_easy:
+
+            if 0 >= float_num:
+                raise TypeError
+
+            elif 0 < float_num < random_easy:
+                return f'higher'
+
+            elif float_num > random_easy:
+                return f'lower'
+
+        elif float_num == random_easy:
+            return True
+
+    except isinstance(num, str):
+        raise ValueError
 
 
 def normal(num):
@@ -35,20 +47,32 @@ def normal(num):
     The guessed number, num, is turned into a float.
     Then, the number is checked if it is not equal to the random number.
     If it isn't equal, it checks if it is greater or less than.
-    If the guessed number is lower than the random number, it returns higher.
-    If the guessed number is higher than the random number, it returns lower.
+        If higher than guessed number, it returns higher.
+        If lower than guessed number, it returns lower.
+    If it's a negative number, it raises a value error.
+    If it's not a string, it raises a type error.
     Otherwise, it returns true which means you win.
-    :param num:
+    :param num: the guessed number
     :return:
     """
     float_num = float(num)
-    if float_num != random_normal:
-        if float_num < random_normal:
-            return f'higher'
-        elif float_num > random_normal:
-            return f'lower'
-    else:
-        return True
+    try:
+        if float_num != random_normal:
+
+            if 0 >= float_num:
+                raise TypeError
+
+            if 0 < float_num < random_normal:
+                return f'higher'
+
+            elif float_num > random_normal:
+                return f'lower'
+            
+        elif float_num == random_normal:
+            return True
+
+    except isinstance(num, str):
+        raise ValueError
 
 
 def hard(num):
@@ -57,20 +81,33 @@ def hard(num):
     The guessed number, num, is turned into a float.
     Then, the number is checked if it is not equal to the random number.
     If it isn't equal, it checks if it is greater or less than.
-    If the guessed number is lower than the random number, it returns higher.
-    If the guessed number is higher than the random number, it returns lower.
+        If higher than guessed number, it returns higher.
+        If lower than guessed number, it returns lower.
+    If it's a negative number, it raises a value error.
+    If it's not a string, it raises a type error.
     Otherwise, it returns true which means you win.
-    :param num:
+    :param num: the guessed number
     :return:
     """
     float_num = float(num)
-    if float_num != random_hard:
-        if float_num < random_hard:
-            return f'higher'
-        elif float_num > random_hard:
-            return f'lower'
-    else:
-        return True
+    try:
+
+        if float_num != random_hard:
+
+            if 0 >= float_num:
+                raise TypeError
+
+            if 0 < float_num < random_hard:
+                return f'higher'
+
+            elif float_num > random_hard:
+                return f'lower'
+            
+        elif float_num == random_hard:
+            return True
+
+    except isinstance(float_num, str):
+        raise ValueError
 
 
 def impossible(num):
@@ -79,17 +116,30 @@ def impossible(num):
     The guessed number, num, is turned into a float.
     Then, the number is checked if it is not equal to the random number.
     If it isn't equal, it checks if it is greater or less than.
-    If the guessed number is lower than the random number, it returns higher.
-    If the guessed number is higher than the random number, it returns lower.
+        If higher than guessed number, it returns higher.
+        If lower than guessed number, it returns lower.
+    If it's a negative number, it raises a value error.
+    If it's not a string, it raises a type error.
     Otherwise, it returns true which means you win.
-    :param num:
+    :param num: the guessed number
     :return:
     """
     float_num = float(num)
-    if float_num != random_impossible:
-        if float_num < random_impossible:
-            return f'higher'
-        elif float_num > random_impossible:
-            return f'lower'
-    else:
-        return True
+    try:
+
+        if float_num != random_impossible:
+
+            if 0 >= float_num:
+                raise TypeError
+
+            if 0 < float_num < random_impossible:
+                return f'higher'
+
+            elif float_num > random_impossible:
+                return f'lower'
+
+        elif float_num == random_impossible:
+            return True
+
+    except isinstance(float_num, str):
+        raise ValueError
