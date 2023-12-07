@@ -3,7 +3,7 @@ from gui import *
 
 def main():
     window = Tk()
-    window.title('Project 1')
+    window.title('Random Number Game')
     window.geometry('400x230')
     window.resizable(False, False)
 
